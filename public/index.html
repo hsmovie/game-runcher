@@ -19,64 +19,12 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4bce8fc270df75fe06d441d14f58ad9d"></script>
     <title>React App</title>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="map" style="width:100%;height:350px;"></div>
     <div id="root"></div>
-
-    <script>
-        var domain = 'http://i1.daumcdn.net';
-        var path = '/dmaps/apis/openapi/sampleimg/';
-        var myPath = '../static/test';
-        var plan = function( x, y, z ) {
-            y = -y - 1;
-            var limit = Math.ceil( 3 / Math.pow( 2, z ) );
-        
-            if ( 0 <= y && y < limit && 0 <= x && x < limit ) {
-                return domain + path + 'planh' +
-                    z + '_' + y + '_' + x + '.png';
-            } else {
-                return 'http://i1.daumcdn.net/dmaps/apis/white.png';
-            }
-        };
-        
-        daum.maps.Tileset.add( 'PLAN',
-                new daum.maps.Tileset(
-                    512, 512, plan, '', false, 0, 2 ) );
-        
-        var node = document.getElementById( 'map' );
-        var map = new daum.maps.Map( node, {
-            projectionId: null,
-            mapTypeId: daum.maps.MapTypeId.PLAN,
-            $scale: false,
-            center: new daum.maps.Coords( 650, -550 ),
-            level: 1
-        } );
-        var center = map.getCenter();
-        // var marker = new daum.maps.Marker({
-        //     position: center
-        // });
-        marker.setMap(map);
-        
-        // var infowindow = new daum.maps.InfoWindow({
-        //     content: '커스텀 타일셋을 올릴수 있습니다!'
-        // });
-        // infowindow.open(map, marker);
-        </script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

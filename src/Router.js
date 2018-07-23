@@ -7,7 +7,7 @@ class Router extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div className="routes-wrapper">
           <Route exact path="/" component={Home} />
           <Route path="/test" component={Test} />
         </div>
