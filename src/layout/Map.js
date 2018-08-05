@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import svgImg from '../static/earth.svg'
 
-class Test extends Component {
+class Map extends Component {
   componentWillMount() {
     this.myRef = React.createRef()
-    this.img = React.createRef()
   }
 
   componentDidMount() {
@@ -69,6 +68,7 @@ class Test extends Component {
 
     })
   }
+
   render() {
     return (
       <div ref={this.myRef} style={styles.container}>
@@ -84,4 +84,4 @@ const styles = {
   }
 }
 
-export default Test
+export default Map
