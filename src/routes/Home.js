@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Header from '../layout/Header'
 import Map from '../layout/Map'
 
 export class Home extends Component {

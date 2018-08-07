@@ -1,0 +1,12 @@
+.bag-wrapper {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: transparent;
+  z-index: 2;
+
+  .bag-icon {
+    height: 68px;
+    width: 68px;
+  }
+}

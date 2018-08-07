@@ -1,0 +1,18 @@
+.accouncement-wrapper {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  background-color: transparent;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .announcement-icon {
+    height: 17px;
+    width: 100%;
+    opacity: 0.8;
+  }
+}
+
