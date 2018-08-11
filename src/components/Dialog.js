@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Dialog from '@material-ui/core/Dialog'
+import MaterialDialog from '@material-ui/core/Dialog'
 
 class Dialog extends Component {
   handleClose = () => {
@@ -7,12 +7,21 @@ class Dialog extends Component {
   };
 
   render() {
+    const {
+      classes,
+      onClose,
+      ...other
+    } = this.props
+
     return (
-      <Dialog onClose={this.handleClose} aria-labelledby="simple-dialog-title" {...other}>
-        <div>
-          hello
+      <MaterialDialog
+        onClose={this.handleClose}
+        aria-labelledby="simple-dialog-title"
+        {...other}
+      >
+        <div className="dialog-wrapper">
         </div>
-      </Dialog>
+      </MaterialDialog>
     )
   }
 }

@@ -7,11 +7,10 @@ class Chatting extends Component {
     isChattingBoxVisible: false
   }
 
-  test = () => {
+  clickChattingButton = () => {
     this.setState((preState) => {
       return {isChattingBoxVisible: !preState.isChattingBoxVisible}
     })
-    console.log(this.state.isChattingBoxVisible)
   }
 
   renderChattingBox() {
@@ -24,8 +23,12 @@ class Chatting extends Component {
     return (
       <div className="chatting-wrapper">
         {this.renderChattingBox()}
-        <div onClick={this.test}>
-          <img src={this.state.isChattingBoxVisible ? chattingOffIcon : chattingOnIcon} alt="" className="chatting-on-icon" />
+        <div onClick={this.clickChattingButton} className="chatting-button-wrapper">
+          <img
+            src={this.state.isChattingBoxVisible ? chattingOnIcon : chattingOffIcon}
+            alt=""
+            className="chatting-on-icon"
+          />
         </div>
       </div>
     )

@@ -1,0 +1,23 @@
+.routes-header-wrapper {
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 55px 11px 0 11px;
+  
+  .arrow-back-icon-wrapper {
+    width: 30px;
+  }
+  .arrow-back-icon {
+    width: 22px;
+    height: 18ppx;
+  }
+  .title-wrapper {
+    font-size: 15px;
+    color: #fff;
+  }
+  .face-wrapper {
+    width: 30px;
+  }
+}
